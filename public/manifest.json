@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Lawyers Desk",
+  "name": "Lawyers Desk - Top Legal Experts in Delhi",
+  "description": "Expert legal representation by Senior Advocates",
   "icons": [
     {
       "src": "favicon.ico",

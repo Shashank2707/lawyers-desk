@@ -1,43 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <!-- In your head section - VERIFY THESE EXIST: -->
+  <meta property="og:image" content="%PUBLIC_URL%/OGImage.jpg">
+  <meta name="twitter:image" content="%PUBLIC_URL%/OGImage.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- ========== PRIMARY SEO META TAGS ========== -->
+  <title>Lawyers Desk - Top Criminal, Civil & Corporate Lawyers in Delhi | Supreme Court Advocates</title>
+  <meta name="description"
+    content="Expert legal representation by Senior Advocates D.K. Singh & Sumit Thakur. 20+ years experience in Criminal, Civil & Corporate Law. Free legal consultation. Delhi High Court & Supreme Court cases.">
+  <meta name="keywords"
+    content="lawyers in Delhi, criminal lawyer, civil lawyer, corporate lawyer, Supreme Court advocates, Delhi High Court lawyers, legal consultation, bail lawyer, property lawyer, divorce lawyer, best lawyers in Delhi">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- ========== OPEN GRAPH TAGS ========== -->
+  <meta property="og:title" content="Lawyers Desk - Top Criminal, Civil & Corporate Lawyers in Delhi">
+  <meta property="og:description"
+    content="Expert legal representation by Senior Advocates with 20+ years experience. Free consultation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lawyersdesk.in">
+  <meta property="og:image" content="%PUBLIC_URL%/OGImage.jpg">
+  <meta property="og:site_name" content="Lawyers Desk">
+
+  <!-- ========== TWITTER CARD TAGS ========== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lawyers Desk - Top Lawyers in Delhi | Supreme Court Advocates">
+  <meta name="twitter:description"
+    content="Expert legal representation by Senior Advocates. 20+ years experience in Criminal, Civil & Corporate Law.">
+  <meta name="twitter:image" content="%PUBLIC_URL%/OGImage.jpg">
+
+  <!-- ========== SCHEMA MARKUP FOR LEGAL SERVICES ========== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Lawyers Desk",
+      "description": "Expert legal services in Criminal, Civil and Corporate Law",
+      "url": "https://lawyersdesk.in",
+      "telephone": "+91-7838866030",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressRegion": "Delhi",
+        "postalCode": "110001",
+        "addressCountry": "IN"
+      },
+      "areaServed": "Delhi, NCR, Supreme Court of India, Delhi High Court",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Legal Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Criminal Law",
+              "description": "Criminal case representation, bail applications, FIR, appeals"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Civil Law",
+              "description": "Property disputes, civil suits, contract matters"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate Law",
+              "description": "Corporate litigation, business disputes, legal compliance"
+            }
+          }
+        ]
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "D.K. Singh",
+          "jobTitle": "Senior Advocate",
+          "description": "28+ years experience in Criminal Law, Former Vice Chairman Bar Council of Delhi"
+        },
+        {
+          "@type": "Person",
+          "name": "Sumit Thakur", 
+          "jobTitle": "Senior Advocate",
+          "description": "20+ years experience in Corporate & Civil Law, Ministry of Environment Panel Head"
+        }
+      ]
+    }
+    </script>
+
+  <!-- ========== LOCAL BUSINESS SCHEMA ========== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LawFirm",
+      "name": "Lawyers Desk",
+      "image": "https://lawyersdesk.in/logo.png",
+      "@id": "https://lawyersdesk.in",
+      "url": "https://lawyersdesk.in",
+      "telephone": "+91-7838866030",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Delhi Court Complex",
+        "addressLocality": "Delhi",
+        "postalCode": "110001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6139,
+        "longitude": 77.2090
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+
+  <!-- ========== CANONICAL URL ========== -->
+  <link rel="canonical" href="https://lawyersdesk.in" />
+
+  <!-- ========== FAVICON & APPLE TOUCH ICON ========== -->
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- ========== PRELOAD CRITICAL RESOURCES ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- ========== GOOGLE SITE VERIFICATION (Add after setting up Search Console) ========== -->
+  <!-- <meta name="google-site-verification" content="your-verification-code" /> -->
+
+  <!-- ========== BING WEBMASTER VERIFICATION ========== -->
+  <!-- <meta name="msvalidate.01" content="your-bing-code" /> -->
+
+  <!-- ========== ADDITIONAL META TAGS ========== -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Lawyers Desk">
+  <meta name="copyright" content="Lawyers Desk">
+  <meta name="language" content="EN">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
+
+  <!-- ========== GEO TAGS ========== -->
+  <meta name="geo.region" content="IN-DL" />
+  <meta name="geo.placename" content="Delhi" />
+  <meta name="geo.position" content="28.6139;77.2090" />
+  <meta name="ICBM" content="28.6139, 77.2090" />
+
+</head>
+
+<body>
+  <noscript>
+    <strong>You need to enable JavaScript to run Lawyers Desk website. For immediate assistance, call us at
+      +91-7838866030</strong>
+  </noscript>
+  <div id="root"></div>
+
+  <!-- ========== ANALYTICS SCRIPTS (Add after setup) ========== -->
+  <!-- Google Analytics -->
+  <!-- Google Tag Manager -->
+  <!-- Facebook Pixel -->
+
+</body>
+
 </html>
