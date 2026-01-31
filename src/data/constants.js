@@ -1,11 +1,11 @@
 import { Briefcase, Scale, Users, FileText } from 'lucide-react';
 
 export const navLinks = [
-  { name: 'Practice Areas', href: '#practice-areas' },
-  { name: 'Case Studies', href: '#case-studies' }, // <--- ADD THIS LINE
-  { name: 'Our Team', href: '#team' },
-  { name: 'Testimonials', href: '#testimonials' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Practice Areas', to: '/#practice-areas' },
+  { name: 'Case Studies', to: '/#case-studies' },
+  { name: 'Our Team', to: '/#team' },
+  { name: 'Testimonials', to: '/#testimonials' },
+  { name: 'Contact', to: '/#contact' },
 ];
 
 export const practiceAreas = [

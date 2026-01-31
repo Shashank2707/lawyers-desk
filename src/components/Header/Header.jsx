@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Scale } from 'lucide-react';
 import { navLinks } from '../../data/constants';
+import { Link } from 'react-router-dom';
 
 const Header = ({ onConsultationClick }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,26 +10,32 @@ const Header = ({ onConsultationClick }) => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center space-x-2 text-2xl font-extrabold text-gray-900 tracking-wider">
-            <Scale className="text-emerald-600 w-8 h-8" />
-            <span>Lawyers <span className="text-emerald-600">Desk</span></span>
-          </a>
           
-          {/* Desktop Nav Links */}
+          {/* Logo */}
+          <Link
+            to="/"
+            className="flex items-center space-x-2 text-2xl font-extrabold text-gray-900 tracking-wider"
+          >
+            <Scale className="text-emerald-600 w-8 h-8" />
+            <span>
+              Lawyers <span className="text-emerald-600">Desk</span>
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6 lg:space-x-10">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 className="text-gray-600 hover:text-emerald-600 font-medium transition duration-150 ease-in-out px-1 py-1"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <button
               onClick={onConsultationClick}
-              className="px-6 py-3 border border-transparent text-sm font-semibold rounded-lg text-white bg-emerald-600 hover:bg-justice shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+              className="px-6 py-3 border border-transparent text-sm font-semibold rounded-lg text-white bg-emerald-600 hover:bg-emerald-700 shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
               Schedule Free Consultation
             </button>
@@ -47,22 +54,25 @@ const Header = ({ onConsultationClick }) => {
         </div>
       </div>
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Navigation Panel */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-xl py-2">
           <div className="pt-2 pb-3 space-y-1 px-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <button
-              onClick={() => { setIsOpen(false); onConsultationClick(); }}
+              onClick={() => {
+                setIsOpen(false);
+                onConsultationClick();
+              }}
               className="block w-full text-center mt-3 px-4 py-2 border border-transparent text-base font-medium rounded-lg text-black bg-emerald-600 hover:bg-emerald-700 shadow-md"
             >
               Schedule Free Consultation

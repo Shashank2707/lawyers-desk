@@ -1,6 +1,16 @@
 import React from 'react';
-import { Users, Briefcase, Link, Instagram, MapIcon, MapPinnedIcon, PhoneIcon, MailIcon } from 'lucide-react';
+import {
+  Users,
+  Briefcase,
+  Link as LinkIcon,
+  Instagram,
+  MapPinnedIcon,
+  PhoneIcon,
+  MailIcon
+} from 'lucide-react';
 import { navLinks } from '../../data/constants';
+import { Link } from 'react-router-dom';
+
 
 const Footer = ({ onConsultationClick }) => (
   <footer id="contact" className="bg-gray-900 text-white mt-12">
@@ -86,7 +96,23 @@ const Footer = ({ onConsultationClick }) => (
 
       <div className="mt-10 pt-8 border-t border-gray-800 text-center">
         <p className="text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Lawyers Desk. All rights reserved. | Disclaimer: Developed by <a href="https://www.linkedin.com/in/shashankporwal/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Shashank</a>.        </p>
+          <Link
+            to="/terms"
+            className="hover:text-emerald-300 underline mr-2"
+          >
+            Privacy Policy
+          </Link>
+          | &copy; {new Date().getFullYear()} Lawyers Desk. All rights reserved. |
+          Disclaimer: Developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/shashankporwal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300 underline"
+          >
+            Shashank
+          </a>.
+        </p>
       </div>
     </div>
   </footer>
